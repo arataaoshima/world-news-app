@@ -1,0 +1,40 @@
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.jumbotron {
+    position: relative;
+}
+
+
+.post-content {
+  position: absolute;
+  top: 0;
+}
+
+h1 {
+    text-align: center;
+  
+}
+
+.kakomi-box1 {
+ margin: 2em auto;
+ padding: 1em;
+ height: 400px;
+ width: 100%;
+ color: #666; /* 文字色 */
+ background-color: #f7f7f7; /* 背景色 */
+ border: 1px solid #ccc; /* 枠線 */
+ border-radius: 20px; /*角の丸み*/
+ box-shadow: 0 0 5px 1px #c0c0c0; /* 影 */
+}
+
+.icon {
+    width:30px;
+}
+
+.show-footer {
+    text-align: center;
+    margin-bottom: 50px;
+}

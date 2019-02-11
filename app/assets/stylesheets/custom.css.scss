@@ -1,0 +1,56 @@
+@import "trix";
+@import "bootstrap";
+
+.container-wrapper {
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+img {
+    height:200px;
+    object-fit: cover;
+}
+
+img:hover{
+    box-shadow:3px 3px 6px rgba(0,0,0,0.5);
+}
+
+
+.card-body {
+    position: relative;
+}   
+
+.time {
+     position:absolute;
+     bottom: 5%;
+     right: 30%;
+     margin: 0 auto;
+}
+
+
+.one-row {
+    margin-bottom:20px;
+}
+
+.pag-bar {
+    //text-align:center;
+    margin: 0 auto;
+   
+   width:100px;
+}
+
+.navbar {
+    background-color:transparent;
+}
+
+.navbar a:hover {
+    color:black;
+    background-color: rgba(255,255,255,1); 
+    text-decoration:none;
+}
+
+.form-wrapper {
+    width:90%;
+    margin: 0 auto;
+}

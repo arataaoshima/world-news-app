@@ -1,0 +1,33 @@
+
+<h1>Welcome to World News</h1>
+<p>Find an artilce to shaken your world</p>
+
+  <div class="card-group">
+   <div class="container"> 
+    <div class="row">
+      <% @posts.each do |post| %>
+       <div class="col-md-4 col-lg-4 one-row">
+         
+          <div class="card h-100">
+            <a href="/posts/<%= post.id %>">
+              <div class="row-height">
+              <%= image_tag icon_post_path(post), class:"card-img-top" %>
+              </div>
+            </a>
+            <div class="card-body">
+              <h5 class="card-title"><%= post.title %></h5>
+              <p class="card-text"><%= post.content %></p>
+              <div class='time-t'>
+                <p class="card-text time"><small class="text-muted">Last updated: <%= post.updated_at.year %>-<%= post.updated_at.month %>-<%= post.updated_at.day %></small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <% end %>
+     </div>
+    </div> 
+  </div>
+  <div class="pag-bar button　pagination">
+   <%= will_paginate @posts, :previous_label => ' &lt 前へ', :next_label => '次へ &gt', class: "pag-bar page-item" %>
+  </div>

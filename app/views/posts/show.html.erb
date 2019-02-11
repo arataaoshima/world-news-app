@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <h1><%= @post.title %></h1>
+</p>
+
+<p>
+  <% @post.categories.each do |category| %>
+  <div class="btn btn-outline-success"><%= category.category_name %></div>
+  <% end %>
+</p>
+
+<p>
+  <div class="kakomi-box1">
+    <%= sanitize @post.content, class:"post-content" %>
+  </div>
+</p>
+<div class="show-footer">
+  <p>
+  <%= link_to '原文はこちら', @post.link, target:"_blank", class:"btn btn-outline-secondary" %> 
+  </p>
+  <%= link_to '編集する', edit_post_path(@post), class:"btn btn-outline-secondary" %> |
+  <%= link_to '記事一覧', posts_path, class:"btn btn-outline-secondary" %>
+</div>
