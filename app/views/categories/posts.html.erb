@@ -1,5 +1,6 @@
-<div class="btn btn-outline-success"><%= @category.category_name %></div>
-
+<div class="category-tag-wrapper">
+  <div class="btn btn-outline-success"><%= @category.category_name %></div>
+</div>
   <div class="card-group">
    <div class="container"> 
     <div class="row">
@@ -14,7 +15,7 @@
             </a>
             <div class="card-body">
               <h5 class="card-title"><%= post.title %></h5>
-              <p class="card-text"><%= post.content %></p>
+              <p class="card-text"><%= post.summary %></p>
               <div class='time-t'>
                 <p class="card-text time"><small class="text-muted">Last updated: <%= post.updated_at.year %>-<%= post.updated_at.month %>-<%= post.updated_at.day %></small></p>
               </div>
