@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   root 'home#top'
 
   resources :categories
+  get 'category_posts/:id' => 'categories#posts'
+  
   resources :posts do
     member {get :icon}
   end

@@ -1,10 +1,15 @@
 class CategoriesController < ApplicationController
   before_action :set_category, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: :posts
   # GET /categories
   # GET /categories.json
   def index
     @categories = Category.all
+  end
+  
+  def posts
+    @category = Category.find(params[:id])
+    @posts = @category.posts.paginate(page: params[:page], per_page: 3)
   end
 
   # GET /categories/1

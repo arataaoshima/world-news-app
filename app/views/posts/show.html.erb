@@ -6,10 +6,10 @@
 
 <p>
   <% @post.categories.each do |category| %>
-  <div class="btn btn-outline-success"><%= category.category_name %></div>
+  <%= link_to category.category_name, "/category_posts/#{category.id}", class:"btn btn-outline-success"  %>
   <% end %>
 </p>
-
+ 
 <p>
   <div class="kakomi-box1">
     <%= sanitize @post.content, class:"post-content" %>
@@ -19,6 +19,8 @@
   <p>
   <%= link_to '原文はこちら', @post.link, target:"_blank", class:"btn btn-outline-secondary" %> 
   </p>
+  <% if user_signed_in? %>
   <%= link_to '編集する', edit_post_path(@post), class:"btn btn-outline-secondary" %> |
+  <% end %>
   <%= link_to '記事一覧', posts_path, class:"btn btn-outline-secondary" %>
 </div>
