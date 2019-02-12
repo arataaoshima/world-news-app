@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Arata</title>
+  <title>Worldly | 世界のニュースから個人を考える</title>
+  <%= favicon_link_tag %>
+  <meta name=”description” content=”Worldlyは世界のニュースから現代を生きる個人がどう生きていくかを考えるためのブログ風まとめサイトです”>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -10,7 +12,7 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light ">
-  <a class="navbar-brand" href="/">World News</a>
+  <a class="navbar-brand" href="/">Worldly</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -53,6 +55,9 @@
 
  <div class="container">
     <%= yield %>
+    <footer>
+      ©Worldly 2019
+    </footer>
  </div>
 </body>
 </html>
