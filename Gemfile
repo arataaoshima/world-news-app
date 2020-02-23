@@ -6,7 +6,7 @@ gem 'rails', '4.2.8'
 # Use sqlite3 as the database for Active Record
 
 gem 'trix'
-gem 'bootstrap', '~> 4.2.1'
+gem 'bootstrap', '~> 4.3.1'
 gem 'devise'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
