@@ -6,10 +6,10 @@ class CategoriesController < ApplicationController
   def index
     @categories = Category.all
   end
-  
+
   def posts
     @category = Category.find(params[:id])
-    @posts = @category.posts.paginate(page: params[:page], per_page: 3)
+    @posts = @category.posts.paginate(page: params[:page], per_page: 3).order(id: "DESC")
   end
 
   # GET /categories/1
